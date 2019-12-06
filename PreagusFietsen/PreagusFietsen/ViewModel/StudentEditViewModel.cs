@@ -23,8 +23,8 @@ namespace PreagusFietsen.ViewModel
                     Size = "large",
                     Weight = 11.0,
                     Speed = 11,
-                    HourRate = 0.2,
-                    DailyRate = 2,
+                    HourRate = 0.6,
+                    DailyRate = 6,
                 },
                 new Bikes(){
                     ID = 2,
@@ -43,18 +43,18 @@ namespace PreagusFietsen.ViewModel
                     Size = "medium",
                     Weight = 11.5,
                     Speed = 8,
-                    HourRate = 0.4,
-                    DailyRate = 4,
+                    HourRate = 0.2,
+                    DailyRate = 2,
                 },
                 new Bikes(){
                     ID = 4,
-                    Type = "?",
+                    Type = "Mokumono Delta Sportive Commuter Bike",
                     Gender = "male",
-                    Size = "small",
-                    Weight = 11.5,
-                    Speed = 9,
-                    HourRate = 0.4,
-                    DailyRate = 4,
+                    Size = "medium",
+                    Weight = 12.0,
+                    Speed = 11,
+                    HourRate = 0.6,
+                    DailyRate = 6,
                 }
             };
         }
