@@ -11,9 +11,9 @@ namespace PreagusFietsen.Model
         public string Type { get; set; }
         public string Gender { get; set; }
         public string Size { get; set; }
-        public double Weight { get; set; }
+        public double WeightKG { get; set; }
         public int Speed { get; set; }
-        public double HourRate { get; set; }
-        public int DailyRate { get; set; }
+        public double HourRateEUR { get; set; }
+        public int DailyRateEUR { get; set; }
     }
 }
