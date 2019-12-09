@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PreagusFietsen.Model
 {
-    class Customer { 
+    class Customer {
+        //PROPERTIES
         public int ID { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }

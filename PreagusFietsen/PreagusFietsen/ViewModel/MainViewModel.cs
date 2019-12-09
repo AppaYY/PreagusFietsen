@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PreagusFietsen.Model;
+﻿using PreagusFietsen.Model;
 // Observable collection import
 using System.Collections.ObjectModel;
 
 namespace PreagusFietsen.ViewModel
 {
-    class BikeViewModel
+    class MainViewModel
     {
-        public ObservableCollection<Bikes> BikeList { get; set; }
-
-        public BikeViewModel()
+        public ObservableCollection<Bike> Bikes { get; set; }
+        public Bike SelectedBike { get; set; }
+        public MainViewModel()
         {
-            BikeList = new ObservableCollection<Bikes>
+            Bikes = new ObservableCollection<Bike>
             {
-                new Bikes()
+                new Bike()
                 {
                     ID = 1,
                     Type = "Schindelhauer Lotte",
@@ -28,7 +23,7 @@ namespace PreagusFietsen.ViewModel
                     HourRateEUR = 0.6,
                     DailyRateEUR = 6,
                 },
-                new Bikes(){
+                new Bike(){
                     ID = 2,
                     Type = "Whippet British Folding Bicycle",
                     Gender = "male",
@@ -38,7 +33,7 @@ namespace PreagusFietsen.ViewModel
                     HourRateEUR = 0.4,
                     DailyRateEUR = 4,
                 },
-                new Bikes(){
+                new Bike(){
                     ID = 3,
                     Type = "Budnitz Alpha Belt Drive Commuter Bicycle",
                     Gender = "male",
@@ -48,7 +43,7 @@ namespace PreagusFietsen.ViewModel
                     HourRateEUR = 0.2,
                     DailyRateEUR = 2,
                 },
-                new Bikes(){
+                new Bike(){
                     ID = 4,
                     Type = "Mokumono Delta Sportive Commuter Bike",
                     Gender = "male",
