@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PreagusFietsen.Model;
+// Observable collection import
+using System.Collections.ObjectModel;
 
 namespace PreagusFietsen.ViewModel
 {
-    class StudentEditViewModel
+    class BikeViewModel
     {
-        public List<Bikes> BikeList { get; set; }
+        public ObservableCollection<Bikes> BikeList { get; set; }
 
-        public StudentEditViewModel()
+        public BikeViewModel()
         {
-            BikeList = new List<Bikes>
+            BikeList = new ObservableCollection<Bikes>
             {
                 new Bikes()
                 {
