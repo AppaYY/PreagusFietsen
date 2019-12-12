@@ -10,5 +10,8 @@
         <Label x:Name="BikesLabel" Content="Bikes" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
         <ListBox x:Name="BikesListBox" ItemsSource="{Binding Bikes}" SelectedItem="{Binding SelectedBike}" DisplayMemberPath="Type" HorizontalAlignment="Left" Height="155" Margin="10,54,0,0" VerticalAlignment="Top" Width="260"/>
         <Button x:Name="EditBikes" Content="Edit list" HorizontalAlignment="Left" Margin="101,224,0,0" VerticalAlignment="Top" Width="75" Click="openEditBikeWin"/>
+        <Label x:Name="StoresLabel" Content=" Stores" HorizontalAlignment="Center" Margin="523,10,192.333,0" VerticalAlignment="Top" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
+        <ListBox x:Name="StoresListBox" ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" DisplayMemberPath="Type" HorizontalAlignment="Right" Height="155" Margin="0,54,10.333,0" VerticalAlignment="Top" Width="260"/>
+        <Button x:Name="EditStores" Content="Edit list" HorizontalAlignment="right" Margin="0,224,97.333,0" VerticalAlignment="Top" Width="75" Click="openEditStoreWin"/>
     </Grid>
 </Window>
