@@ -55,11 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\StoreEditViewModel.cs" />
     <Compile Include="ViewModel\BikeEditViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\StoresEdit.xaml.cs">
+      <DependentUpon>StoresEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\BikesEdit.xaml.cs">
       <DependentUpon>BikesEdit.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\StoresEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
