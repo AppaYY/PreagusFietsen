@@ -1,60 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using PreagusFietsen.Model;
+﻿using PreagusFietsen.Model;
+// Observable collection import
+using System.Collections.ObjectModel;
 
 namespace PreagusFietsen.ViewModel
 {
-    class StudentEditViewModel
+    class MainViewModel
     {
-        public List<Bikes> BikeList { get; set; }
-
-        public StudentEditViewModel()
+        public ObservableCollection<Bike> Bikes { get; set; }
+        public Bike SelectedBike { get; set; }
+        public MainViewModel()
         {
-            BikeList = new List<Bikes>
+            Bikes = new ObservableCollection<Bike>
             {
-                new Bikes()
+                new Bike()
                 {
                     ID = 1,
                     Type = "Schindelhauer Lotte",
                     Gender = "female",
                     Size = "large",
-                    Weight = 11.0,
+                    WeightKG = 11.0,
                     Speed = 11,
-                    HourRate = 0.6,
-                    DailyRate = 6,
+                    HourRateEUR = 0.6,
+                    DailyRateEUR = 6,
                 },
-                new Bikes(){
+                new Bike(){
                     ID = 2,
                     Type = "Whippet British Folding Bicycle",
                     Gender = "male",
                     Size = "small",
-                    Weight = 11.5,
+                    WeightKG = 11.5,
                     Speed = 9,
-                    HourRate = 0.4,
-                    DailyRate = 4,
+                    HourRateEUR = 0.4,
+                    DailyRateEUR = 4,
                 },
-                new Bikes(){
+                new Bike(){
                     ID = 3,
                     Type = "Budnitz Alpha Belt Drive Commuter Bicycle",
                     Gender = "male",
                     Size = "medium",
-                    Weight = 11.5,
+                    WeightKG = 11.5,
                     Speed = 8,
-                    HourRate = 0.2,
-                    DailyRate = 2,
+                    HourRateEUR = 0.2,
+                    DailyRateEUR = 2,
                 },
-                new Bikes(){
+                new Bike(){
                     ID = 4,
                     Type = "Mokumono Delta Sportive Commuter Bike",
                     Gender = "male",
                     Size = "medium",
-                    Weight = 12.0,
+                    WeightKG = 12.0,
                     Speed = 11,
-                    HourRate = 0.6,
-                    DailyRate = 6,
+                    HourRateEUR = 0.6,
+                    DailyRateEUR = 6,
                 }
             };
         }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PreagusFietsen.Model
 {
-    class Reservation { 
+    class Reservation {
+        //PROPERTIES
         public int ID { get; set; }
         public int CustomerID { get; set; }
         public List<int> BikesID { get; set; }
