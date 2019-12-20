@@ -10,6 +10,6 @@ namespace PreagusFietsen.ViewModel
         public BikeEditViewModel(ObservableCollection<Bike> bikes)
         {
             Bikes = bikes; // set the property Courses (that is bound to the view) to be the collection we get passed from the other View
-        }
+        }   
     }
 }

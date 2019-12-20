@@ -33,5 +33,18 @@ namespace PreagusFietsen
             //SHOW VIEW WINDOW
             BikeView.Show();
         }
+
+        private void openEditStoreWin(object sender, RoutedEventArgs e)
+        {
+            MainViewModel svm = (MainViewModel)DataContext;
+
+            StoreEditViewModel editsvm = new StoreEditViewModel(svm.Stores);
+
+            StoresEdit StoreView = new StoresEdit();
+
+            StoreView.DataContext = editsvm;
+
+            StoreView.Show();
+        }
     }
 }
