@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\RelayCommand.cs" />
     <Compile Include="ViewModel\StoreEditViewModel.cs" />
     <Compile Include="ViewModel\BikeEditViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -115,5 +116,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
