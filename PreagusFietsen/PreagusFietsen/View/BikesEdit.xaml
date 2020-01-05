@@ -5,9 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PreagusFietsen.View"
         mc:Ignorable="d"
-        Title="Edit Bike List" Height="450" Width="800" ResizeMode="NoResize">
-    <Grid Margin="0,0,10,10">
-        <DataGrid x:Name="BikesDataGrid" ItemsSource="{Binding Bikes}" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772"/>
+        Title="Edit Bike List" Height="511.198" Width="681.442" ResizeMode="NoResize">
+    <Grid Margin="0,0,10,0">
+        <DataGrid x:Name="BikesDataGrid" ItemsSource="{Binding Bikes}" SelectedItem="{Binding SelectedBike}" HorizontalAlignment="Left" Height="176" Margin="10,10,0,0" VerticalAlignment="Top" Width="632" IsReadOnly="True" CanUserResizeRows="False" SelectionMode="Single" AlternationCount="2"/>
+        <TextBox x:Name="Bike_Type" Text="{Binding SelectedBike.Type}" HorizontalAlignment="Left" Height="28" Margin="93,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Bike_Gender" Text="{Binding SelectedBike.Gender}" HorizontalAlignment="Left" Height="28" Margin="93,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Bike_Size" Text="{Binding SelectedBike.Size}" HorizontalAlignment="Left" Height="28" Margin="93,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Bike_Weight" Text="{Binding SelectedBike.WeightKG}" HorizontalAlignment="Left" Height="28" Margin="93,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Bike_Speed" Text="{Binding SelectedBike.Speed}" HorizontalAlignment="Left" Height="28" Margin="93,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Bike_HourRate" Text="{Binding SelectedBike.HourRateEUR}" HorizontalAlignment="Left" Height="28" Margin="93,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Bike_DailyRate" Text="{Binding SelectedBike.DailyRateEUR}" HorizontalAlignment="Left" Height="28" Margin="93,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="Bike_Typelabel" Content="Type:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Bike_Genderlabel" Content="Gender:" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Bike_Sizelabel" Content="Size:" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Bike_Weightlabel" Content="Weight in KG:" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Bike_Speedlabel" Content="Speed:" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Bike_HourRatelabel" Content="Hour rate:" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Bike_DailyRatelabel" Content="Daily rate:" HorizontalAlignment="Left" Margin="10,434,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="label" Content="Edit values" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="20"/>
 
     </Grid>
 </Window>

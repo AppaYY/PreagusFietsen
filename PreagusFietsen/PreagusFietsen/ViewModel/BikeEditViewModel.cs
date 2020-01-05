@@ -10,13 +10,15 @@ namespace PreagusFietsen.ViewModel
         public Bike SelectedBike { get; set; }
         public RelayCommand ChangeNameClick { get; set; }
         public RelayCommand DeleteClick { get; set; }
+        public RelayCommand EditClick { get; set; }
         public BikeEditViewModel(ObservableCollection<Bike> bikes)
         {
             Bikes = bikes; // set the property Courses (that is bound to the view) to be the collection we get passed from the other View
             ChangeNameClick = new RelayCommand(ChangeName);
-            DeleteClick = new RelayCommand(DeleteStudent)
+            DeleteClick = new RelayCommand(DeleteBike);
         }
 
+        public string bikeType { get; set; }
 
         public void ChangeName(object a)
         {
@@ -26,7 +28,7 @@ namespace PreagusFietsen.ViewModel
             }
             else
             {
-                MessageBox.Show("Please select a store first");
+                MessageBox.Show("Please select a bike please");
             }
         }
 
@@ -38,10 +40,9 @@ namespace PreagusFietsen.ViewModel
             }
             else
             {
-                MessageBox.Show("Please select a student first");
+                MessageBox.Show("Please select a bike please");
             }
         }
-
     }
 
 

@@ -22,16 +22,22 @@ namespace PreagusFietsen
         {
             //GET DATA FROM ViewModel -> MainViewModel
             MainViewModel bvm = (MainViewModel)DataContext;
+            if (bvm.SelectedStore == null)
+            {
+                MessageBox.Show("Select a store please");
+            }
+            else
+            {
+                //PASS ON DATA TO ViewModel -> BikeEditViewModel
+                BikeEditViewModel editbvm = new BikeEditViewModel(bvm.SelectedStore.Bikes);
 
-            //PASS ON DATA TO ViewModel -> BikeEditViewModel
-            BikeEditViewModel editbvm = new BikeEditViewModel(bvm.Bikes);
-
-            //MAKE NEW VIEW WINDOW (View -> BikesEdit form)
-            BikesEdit BikeView = new BikesEdit();
-            //PASS VIEW WINDOW TO VIEWMODEL
-            BikeView.DataContext = editbvm;
-            //SHOW VIEW WINDOW
-            BikeView.Show();
+                //MAKE NEW VIEW WINDOW (View -> BikesEdit form)
+                BikesEdit BikeView = new BikesEdit();
+                //PASS VIEW WINDOW TO VIEWMODEL
+                BikeView.DataContext = editbvm;
+                //SHOW VIEW WINDOW
+                BikeView.Show();
+            }
         }
 
         private void openEditStoreWin(object sender, RoutedEventArgs e)
