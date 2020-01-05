@@ -9,9 +9,9 @@
     <Grid>
         <Label x:Name="StoresLabel" Content="Stores" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Yu Gothic UI Semibold"/>
         <ListBox x:Name="StoresListBox" ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" DisplayMemberPath="City" HorizontalAlignment="Left" Height="155" Margin="10,54,0,0" VerticalAlignment="Top" Width="260"/>
-        <Button x:Name="EditStores" Content="Storelist" HorizontalAlignment="Left" Margin="101,224,0,0" VerticalAlignment="Top" Width="75" Click="openEditStoreWin"/>
+        <Button x:Name="EditStores" Content="Store list" HorizontalAlignment="Left" Margin="101,224,0,0" VerticalAlignment="Top" Width="75" Click="openEditStoreWin"/>
         <Label x:Name="BikesLabel" Content="Bikes" HorizontalAlignment="Center" Margin="439,10,285,0" VerticalAlignment="Top" FontSize="22" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="-0.044,0.538" Width="70"/>
         <ListBox x:Name="BikesListBox" ItemsSource="{Binding SelectedStore.Bikes}" DisplayMemberPath="Type" Height="155" Margin="0,54,95,0" VerticalAlignment="Top" Width="260" HorizontalAlignment="Right"/>
-        <Button x:Name="EditBikes" Content="Bikelist" HorizontalAlignment="right" Margin="0,224,206,0" VerticalAlignment="Top" Width="75" Click="openEditBikeWin"/>
+        <Button x:Name="EditBikes" Content="Bike list" HorizontalAlignment="right" Margin="0,224,206,0" VerticalAlignment="Top" Width="75" Click="openEditBikeWin"/>
     </Grid>
 </Window>
