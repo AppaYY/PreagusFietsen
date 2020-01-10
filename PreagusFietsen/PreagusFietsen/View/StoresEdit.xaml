@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="Edit Store List" Height="450" Width="800" ResizeMode="NoResize">
     <Grid Margin="0,0,10,10">
-        <DataGrid x:Name="StoresDataGrid" ItemsSource="{Binding Stores}" HorizontalAlignment="right" Height="399" Margin="0,10,119,0" VerticalAlignment="Top" Width="653"/>
+        <DataGrid x:Name="StoresDataGrid" ItemsSource="{Binding Stores}" HorizontalAlignment="right" Height="125" Margin="0,10,9.667,0" VerticalAlignment="Top" Width="762"/>
+        <Label x:Name="AddStoreLabel" Content="Add store" HorizontalAlignment="Left" Margin="24,140,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="Store_Addresslabel_Add" Content="Address:" HorizontalAlignment="Left" Margin="24,184,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Store_Citylabel_Add" Content="City:" HorizontalAlignment="Left" Margin="24,217,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label x:Name="Store_MaxCapacitylabel_Add" Content="Maximal Capacity:" HorizontalAlignment="Left" Margin="24,251,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <TextBox x:Name="Store_Address_Add" Text="{Binding Address}" HorizontalAlignment="Left" Height="28" Margin="107,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Store_City_Add" Text="{Binding City}" HorizontalAlignment="Left" Height="28" Margin="107,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <TextBox x:Name="Store_MaxCapacity_Add" Text="{Binding MaxCapacity}" HorizontalAlignment="Left" Height="28" Margin="107,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <Button x:Name="AddStoreButton" Content="Add store" Command="{Binding AddClick}" HorizontalAlignment="Left" Margin="252,152,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
