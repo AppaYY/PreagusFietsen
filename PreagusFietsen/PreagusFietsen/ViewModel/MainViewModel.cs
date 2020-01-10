@@ -23,7 +23,6 @@ namespace PreagusFietsen.ViewModel
                     {
                         new Bike()
                         {
-                            ID = 1,
                             Type = "Schindelhauer Lotte",
                             Gender = "female",
                             Size = "large",
@@ -33,7 +32,6 @@ namespace PreagusFietsen.ViewModel
                             DailyRateEUR = 6,
                         },
                         new Bike(){
-                            ID = 2,
                             Type = "Whippet British Folding Bicycle",
                             Gender = "male",
                             Size = "small",
@@ -43,7 +41,6 @@ namespace PreagusFietsen.ViewModel
                             DailyRateEUR = 4,
                         },
                         new Bike(){
-                            ID = 3,
                             Type = "Budnitz Alpha Belt Drive Commuter Bicycle",
                             Gender = "male",
                             Size = "medium",
@@ -53,7 +50,6 @@ namespace PreagusFietsen.ViewModel
                             DailyRateEUR = 2,
                         },
                         new Bike(){
-                            ID = 4,
                             Type = "Mokumono Delta Sportive Commuter Bike",
                             Gender = "male",
                             Size = "medium",

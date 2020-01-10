@@ -5,40 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PreagusFietsen.View"
         mc:Ignorable="d"
-        Title="Bike list" Height="511.198" Width="681.442" ResizeMode="NoResize">
+        Title="Bike list" Height="575.998" Width="681.442" ResizeMode="NoResize">
     <Grid Margin="0,0,10,0">
         <DataGrid x:Name="BikesDataGrid" ItemsSource="{Binding Bikes}" SelectedItem="{Binding SelectedBike}" HorizontalAlignment="Left" Height="176" Margin="10,10,0,0" VerticalAlignment="Top" Width="632" IsReadOnly="True" CanUserResizeRows="False" SelectionMode="Single" AlternationCount="2"/>
+        
         <Label x:Name="EditBikeLabel" Content="Edit bike" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="Bike_Typelabel" Content="Type:" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Genderlabel" Content="Gender:" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Sizelabel" Content="Size:" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Weightlabel" Content="Weight in KG:" HorizontalAlignment="Left" Margin="10,335,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Speedlabel" Content="Speed:" HorizontalAlignment="Left" Margin="10,368,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_HourRatelabel" Content="Hour rate:" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_DailyRatelabel" Content="Daily rate:" HorizontalAlignment="Left" Margin="10,434,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <TextBox x:Name="Bike_Type" Text="{Binding SelectedBike.Type}" HorizontalAlignment="Left" Height="28" Margin="93,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Gender" Text="{Binding SelectedBike.Gender}" HorizontalAlignment="Left" Height="28" Margin="93,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Size" Text="{Binding SelectedBike.Size}" HorizontalAlignment="Left" Height="28" Margin="93,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Weight" Text="{Binding SelectedBike.WeightKG}" HorizontalAlignment="Left" Height="28" Margin="93,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Speed" Text="{Binding SelectedBike.Speed}" HorizontalAlignment="Left" Height="28" Margin="93,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_HourRate" Text="{Binding SelectedBike.HourRateEUR}" HorizontalAlignment="Left" Height="28" Margin="93,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_DailyRate" Text="{Binding SelectedBike.DailyRateEUR}" HorizontalAlignment="Left" Height="28" Margin="93,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="Bike_Typelabel" Content="Type:" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Genderlabel" Content="Gender:" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Sizelabel" Content="Size:" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Weightlabel" Content="Weight in KG:" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Speedlabel" Content="Speed:" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_HourRatelabel" Content="Hour rate:" HorizontalAlignment="Left" Margin="10,421,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_DailyRatelabel" Content="Daily rate:" HorizontalAlignment="Left" Margin="10,458,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <TextBox x:Name="Bike_Type" Text="{Binding SelectedBike.Type}" HorizontalAlignment="Left" Height="32" Margin="93,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Gender" Text="{Binding SelectedBike.Gender}" HorizontalAlignment="Left" Height="32" Margin="93,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Size" Text="{Binding SelectedBike.Size}" HorizontalAlignment="Left" Height="32" Margin="93,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Weight" Text="{Binding SelectedBike.WeightKG}" HorizontalAlignment="Left" Height="32" Margin="93,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Speed" Text="{Binding SelectedBike.Speed}" HorizontalAlignment="Left" Height="32" Margin="93,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_HourRate" Text="{Binding SelectedBike.HourRateEUR}" HorizontalAlignment="Left" Height="32" Margin="93,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_DailyRate" Text="{Binding SelectedBike.DailyRateEUR}" HorizontalAlignment="Left" Height="32" Margin="93,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
         
         <Label x:Name="AddBikeLabel" Content="Add bike" HorizontalAlignment="Left" Margin="338,191,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="20"/>
-        <Label x:Name="Bike_Typelabel_Add" Content="Type:" HorizontalAlignment="Left" Margin="338,235,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Genderlabel_Add" Content="Gender:" HorizontalAlignment="Left" Margin="338,268,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Sizelabel_Add" Content="Size:" HorizontalAlignment="Left" Margin="338,302,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Weightlabel_Add" Content="Weight in KG:" HorizontalAlignment="Left" Margin="338,335,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_Speedlabel_Add" Content="Speed:" HorizontalAlignment="Left" Margin="338,368,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_HourRatelabel_Add" Content="Hour rate:" HorizontalAlignment="Left" Margin="338,401,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <Label x:Name="Bike_DailyRatelabel_Add" Content="Daily rate:" HorizontalAlignment="Left" Margin="338,434,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
-        <TextBox x:Name="Bike_Type_Add" Text="{Binding bikeType}" HorizontalAlignment="Left" Height="28" Margin="421,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Gender_Add" Text="{Binding bikeGender}" HorizontalAlignment="Left" Height="28" Margin="421,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Size_Add" Text="{Binding bikeSize}" HorizontalAlignment="Left" Height="28" Margin="421,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Weight_Add" Text="{Binding bikeWeight}" HorizontalAlignment="Left" Height="28" Margin="421,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_Speed_Add" Text="{Binding bikeSpeed}" HorizontalAlignment="Left" Height="28" Margin="421,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_HourRate_Add" Text="{Binding bikeHourRate}" HorizontalAlignment="Left" Height="28" Margin="421,401,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
-        <TextBox x:Name="Bike_DailyRate_Add" Text="{Binding bikeDailyRate}" HorizontalAlignment="Left" Height="28" Margin="421,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220"/>
+        <Label x:Name="Bike_Typelabel_Add" Content="Type:" HorizontalAlignment="Left" Margin="338,235,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Genderlabel_Add" Content="Gender:" HorizontalAlignment="Left" Margin="338,273,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Sizelabel_Add" Content="Size:" HorizontalAlignment="Left" Margin="338,310,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Weightlabel_Add" Content="Weight in KG:" HorizontalAlignment="Left" Margin="338,347,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_Speedlabel_Add" Content="Speed:" HorizontalAlignment="Left" Margin="338,384,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_HourRatelabel_Add" Content="Hour rate:" HorizontalAlignment="Left" Margin="338,421,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Bike_DailyRatelabel_Add" Content="Daily rate:" HorizontalAlignment="Left" Margin="338,458,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <TextBox x:Name="Bike_Type_Add" Text="{Binding bikeType}" HorizontalAlignment="Left" Height="32" Margin="421,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Gender_Add" Text="{Binding bikeGender}" HorizontalAlignment="Left" Height="32" Margin="421,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Size_Add" Text="{Binding bikeSize}" HorizontalAlignment="Left" Height="32" Margin="421,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Weight_Add" Text="{Binding bikeWeight}" HorizontalAlignment="Left" Height="32" Margin="421,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_Speed_Add" Text="{Binding bikeSpeed}" HorizontalAlignment="Left" Height="32" Margin="421,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_HourRate_Add" Text="{Binding bikeHourRate}" HorizontalAlignment="Left" Height="32" Margin="421,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Bike_DailyRate_Add" Text="{Binding bikeDailyRate}" HorizontalAlignment="Left" Height="32" Margin="421,458,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+
         <Button x:Name="AddBikeButton" Content="Add bike" Command="{Binding AddClick}" HorizontalAlignment="Left" Margin="566,203,0,0" VerticalAlignment="Top" Width="75"/>
 
         <Button x:Name="DeleteBikeButton" Content="Delete bike" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="238,203,0,0" VerticalAlignment="Top" Width="75"/>
