@@ -13,5 +13,6 @@
         <Label x:Name="BikesLabel" Content="Bikes" HorizontalAlignment="Center" Margin="439,10,285,0" VerticalAlignment="Top" FontSize="22" FontFamily="Yu Gothic UI Semibold" RenderTransformOrigin="-0.044,0.538" Width="70"/>
         <ListBox x:Name="BikesListBox" ItemsSource="{Binding SelectedStore.Bikes}" DisplayMemberPath="Type" Height="155" Margin="0,54,95,0" VerticalAlignment="Top" Width="260" HorizontalAlignment="Right"/>
         <Button x:Name="EditBikes" Content="Bike list" HorizontalAlignment="right" Margin="0,224,206,0" VerticalAlignment="Top" Width="75" Click="openEditBikeWin"/>
-    </Grid>
+      <ListBox x:Name="ReservationListBox" ItemsSource="{Binding Reservations}" DisplayMemberPath="Type" Height="155" Margin="0,54,95,0" VerticalAlignment="bottom" Width="260" HorizontalAlignment="Right"/>
+          </Grid>
 </Window>

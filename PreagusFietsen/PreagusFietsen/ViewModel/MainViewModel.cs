@@ -8,6 +8,7 @@ namespace PreagusFietsen.ViewModel
     {
         public ObservableCollection<Store> Stores { get; set; }
         public ObservableCollection<Bike> Bikes { get; set; }
+        public ObservableCollection<Reservation> Reservations { get; set; }
         public Store SelectedStore{ get; set; }
         public MainViewModel()
         {
@@ -57,7 +58,15 @@ namespace PreagusFietsen.ViewModel
                             Speed = 11,
                             HourRateEUR = 0.6,
                             DailyRateEUR = 6,
-                        }
+                        },
+                    new Reservation(){
+                    CustomerID = 1,
+                    BikesID = 1,
+                    Start = "10-10-1010",
+                    End = "10-10-1010",
+                    PickupStoreID = 1,
+                   DropoffStoreID = 1,
+                    }
                     }
                 }
             };
