@@ -58,13 +58,21 @@
     <Compile Include="Classes\RelayCommand.cs" />
     <Compile Include="ViewModel\StoreEditViewModel.cs" />
     <Compile Include="ViewModel\BikeEditViewModel.cs" />
+    <Compile Include="ViewModel\ReservationEditViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="View\ReservationsEdit.xaml.cs">
+      <DependentUpon>ReservationsEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\StoresEdit.xaml.cs">
       <DependentUpon>StoresEdit.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\BikesEdit.xaml.cs">
       <DependentUpon>BikesEdit.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\ReservationsEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\StoresEdit.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

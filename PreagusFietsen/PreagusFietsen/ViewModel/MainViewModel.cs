@@ -1,6 +1,8 @@
 ﻿using PreagusFietsen.Model;
 // Observable collection import
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
+using System;
 
 namespace PreagusFietsen.ViewModel
 {
@@ -59,16 +61,34 @@ namespace PreagusFietsen.ViewModel
                             HourRateEUR = 0.6,
                             DailyRateEUR = 6,
                         },
-                    new Reservation(){
-                    CustomerID = 1,
-                    BikesID = 1,
-                    Start = "10-10-1010",
-                    End = "10-10-1010",
-                    PickupStoreID = 1,
-                   DropoffStoreID = 1,
-                    }
+                   
                     }
                 }
+            };
+            Reservations = new ObservableCollection<Reservation>
+            {
+                new Reservation(){
+                ID = 1,
+                CustomerID = 1,
+                BikesID = 1,
+                Start = new DateTime(1011,10,19),
+                End = new DateTime(1011,10,19),
+                PickupStoreID = 1,
+                DropoffStoreID = 1,
+                },
+                new Reservation(){
+                ID = 2,
+                CustomerID = 1,
+                BikesID = 1,
+                Start = new DateTime(1011,10,19),
+                End = new DateTime(1011,10,19),
+                PickupStoreID = 1,
+                DropoffStoreID = 1,
+                },
+            
+            
+            
+            
             };
         }
     }

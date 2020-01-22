@@ -1,0 +1,33 @@
+<Window x:Class="PreagusFietsen.View.ReservationsEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Reservation list" Height="575.998" Width="681.442" ResizeMode="NoResize">
+    <Grid Margin="0,0,10,0">
+        <DataGrid x:Name="ReservationDataGrid" ItemsSource="{Binding Reservations}" SelectedItem="{Binding SelectedReservation}" HorizontalAlignment="Left" Height="176" Margin="10,10,0,0" VerticalAlignment="Top" Width="632" IsReadOnly="True" CanUserResizeRows="False" SelectionMode="Single" AlternationCount="2"/>
+
+        <Label x:Name="EditReservationLabel" Content="Edit Reservation" HorizontalAlignment="Left" Margin="10,191,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontWeight="Bold" FontSize="20"/>
+        <Label x:Name="Reservation_ID" Content="IDlabel:" HorizontalAlignment="Left" Margin="10,236,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Reservation_CustomerIDlabel" Content="CustomerIDlabel:" Margin="333,198,188,0" VerticalAlignment="Top" Height="32" FontSize="15"/>
+        <Label x:Name="Reservation_BikesIDlabel" Content="BikesIDlabel:" HorizontalAlignment="Left" Margin="10,273,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Reservation_start" Content="start:" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Reservation_end" Content="end:" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Reservation_PickupStoreID" Content="PickupStoreID:" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <Label x:Name="Reservation_DropoffStoreID" Content="DropoffStoreID" HorizontalAlignment="Left" Margin="10,421,0,0" VerticalAlignment="Top" Height="32" Width="78" FontSize="15"/>
+        <TextBox x:Name="Reservation_IDlabel" Text="{Binding ReservationID}" HorizontalAlignment="Left" Height="32" Margin="93,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Reservation_CustomerID" Text="{Binding ReservationCustomerID}" HorizontalAlignment="Left" Height="32" Margin="333,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Reservation_BikesID" Text="{Binding ReservationBikesID}" HorizontalAlignment="Left" Height="32" Margin="93,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Reservation_startbox" Text="{Binding ReservationStart}" HorizontalAlignment="Left" Height="32" Margin="93,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Reservation_endbox" Text="{Binding ReservationEnd}" HorizontalAlignment="Left" Height="32" Margin="93,347,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Reservation_PickupStoreIDbox" Text="{Binding ReservationPickupStoreID}" HorizontalAlignment="Left" Height="32" Margin="93,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+        <TextBox x:Name="Reservation_DropoffStoreIDbox" Text="{Binding ReservationDropoffStoreID}" HorizontalAlignment="Left" Height="32" Margin="93,421,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="15"/>
+
+
+        <Button x:Name="AddReservationButton" Content="Add Reservation" Command="{Binding AddClick}" HorizontalAlignment="Left" Margin="463,490,0,0" VerticalAlignment="Top" Width="139"/>
+        <Button x:Name="AddReservationButton_Copy" Content="Delete Reservation" Command="{Binding DeleteClick}" HorizontalAlignment="Left" Margin="463,517,0,0" VerticalAlignment="Top" Width="139"/>
+
+
+    </Grid>
+</Window>

@@ -10,10 +10,12 @@ namespace PreagusFietsen.Model
         //PROPERTIES
         public int ID { get; set; }
         public int CustomerID { get; set; }
-        public List<int> BikesID { get; set; }
+        public int BikesID { get; set; }
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
         public int PickupStoreID { get; set; }
         public int DropoffStoreID { get; set; }
+
     }
+    
 }

@@ -53,5 +53,25 @@ namespace PreagusFietsen
             //SHOW VIEW WINDOW
             StoreView.Show();
         }
+         private void openEditReservationWin(object sender, RoutedEventArgs e)
+        {
+            
+            MainViewModel svm = (MainViewModel)DataContext;
+
+            //PASS ON DATA TO viewmodel -> StoreEditViewModel
+            ReservationEditViewModel editsvm = new ReservationEditViewModel(svm.Reservations);
+            //MAKE NEW VIEW WINDOW (View -> StoresEdit form)
+            ReservationsEdit ReservationView = new ReservationsEdit();
+            //PASS VIEW WINDOW TO VIEWMODEL
+            ReservationView.DataContext = editsvm;
+            //SHOW VIEW WINDOW
+            ReservationView.Show();
+           
+        }
+
+        private void ReservationListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
