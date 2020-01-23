@@ -24,5 +24,5 @@ namespace PreagusFietsen.Model
             totalBikes++;
             ID = totalBikes;
         }
-    }
+    }   
 }
