@@ -16,5 +16,13 @@ namespace PreagusFietsen.Model
         public int Speed { get; set; }
         public double HourRateEUR { get; set; }
         public int DailyRateEUR { get; set; }
+
+        private static int totalBikes = 0;
+
+        public Bike()
+        {
+            totalBikes++;
+            ID = totalBikes;
+        }
     }
 }
