@@ -87,8 +87,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Customer.cs" />
-    <Compile Include="Model\Reservation.cs" />
     <Compile Include="Model\Store.cs" />
     <Compile Include="Model\Bike.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

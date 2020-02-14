@@ -8,14 +8,12 @@ namespace PreagusFietsen.ViewModel
     {
         public ObservableCollection<Bike> Bikes { get; set; }
         public Bike SelectedBike { get; set; }
-        public RelayCommand ChangeNameClick { get; set; }
         public RelayCommand DeleteClick { get; set; }
         public RelayCommand AddClick { get; set; }
         public BikeEditViewModel(ObservableCollection<Bike> bikes)
         {
             // Use the collection Bikes from the other View as a later property for Stores
             Bikes = bikes; 
-            ChangeNameClick = new RelayCommand(ChangeType);
             DeleteClick = new RelayCommand(DeleteBike);
             AddClick = new RelayCommand(AddBike);
         }
@@ -29,17 +27,6 @@ namespace PreagusFietsen.ViewModel
         public double bikeHourRate { get; set; }
         public int bikeDailyRate { get; set; }
 
-        public void ChangeType(object a)
-        {
-            if (SelectedBike != null)
-            {
-                SelectedBike.Type = "CHANGED TYPE";
-            }
-            else
-            {
-                MessageBox.Show("Please select a bike please");
-            }
-        }
 
         public void DeleteBike(object a)
         {
