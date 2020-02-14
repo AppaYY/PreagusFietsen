@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace PreagusFietsen.Model
 {
-    class Bike { 
-        //PROPERTIES
-        public int ID { get; set; }
-        public string Type { get; set; }
-        public string Gender { get; set; }
-        public string Size { get; set; }
-        public double WeightKG { get; set; }
-        public int Speed { get; set; }
-        public double HourRateEUR { get; set; }
-        public int DailyRateEUR { get; set; }
+    public class Bike : INotifyPropertyChanged 
+    {
+        private string _type;
+        private string _gender;
+        private string _size;
+        private double _weightKg;
+        private int _speed;
+        private double _hourRateEur;
+        private int _dailyRateEUR;
 
-        private static int totalBikes = 0;
 
-        public Bike()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        public string Type { get => _type; set { _type = value; Notify("Type"); } }
+        public string Gender { get => _gender; set { _gender = value; Notify("Gender"); } }
+        public string Size { get => _size; set { _size = value; Notify("Size"); } }
+        public double WeightKG { get => _weightKg; set { _weightKg = value; Notify("WeightKG"); } }
+        public int Speed { get => _speed; set { _speed = value; Notify("Speed"); } }
+        public double HourRateEUR { get => _hourRateEur; set { _hourRateEur = value; Notify("HourRateEUR"); } }
+        public int DailyRateEUR { get => _dailyRateEUR; set { _dailyRateEUR = value; Notify("DailyRateEUR"); } }
+
+
+        public void Notify(string propertyName)
         {
-            totalBikes++;
-            ID = totalBikes;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-    }
+    }   
 }

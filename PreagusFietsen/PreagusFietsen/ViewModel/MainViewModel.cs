@@ -15,7 +15,6 @@ namespace PreagusFietsen.ViewModel
             {
                 new Store
                 {
-                    ID = 1,
                     Address = "1234AB 4",
                     City = "Almere",
                     MaxCapacity = 1334,
