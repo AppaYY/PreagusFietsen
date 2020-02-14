@@ -9,8 +9,13 @@ namespace PreagusFietsen.ViewModel
         public ObservableCollection<Store> Stores { get; set; }
         public ObservableCollection<Bike> Bikes { get; set; }
         public Store SelectedStore{ get; set; }
+        public RelayCommand OpenStoreListClick { get; set; }
+        public RelayCommand OpenBikeListClick { get; set; }
         public MainViewModel()
         {
+            OpenStoreListClick = new RelayCommand(OpenStoreList);
+            OpenBikeListClick = new RelayCommand(OpenBikeList);
+
             Stores = new ObservableCollection<Store>
             {
                 new Store
@@ -60,6 +65,40 @@ namespace PreagusFietsen.ViewModel
                     }
                 }
             };
+        }
+
+        public void OpenStoreList(object a)
+        {
+            if (SelectedBike != null)
+            {
+                Bikes.Remove(SelectedBike);
+            }
+            else
+            {
+                MessageBox.Show("Please select a bike please");
+            }
+        }
+
+        public void OpenBikeList(object a)
+        {
+            //GET DATA FROM ViewModel -> MainViewModel
+            MainViewModel bvm = (MainViewModel)DataContext;
+            if (bvm.SelectedStore == null)
+            {
+                MessageBox.Show("Select a store please");
+            }
+            else
+            {
+                //PASS ON DATA TO ViewModel -> BikeEditViewModel
+                BikeEditViewModel editbvm = new BikeEditViewModel(bvm.SelectedStore.Bikes);
+
+                //MAKE NEW VIEW WINDOW (View -> BikesEdit form)
+                BikesEdit BikeView = new BikesEdit();
+                //PASS VIEW WINDOW TO VIEWMODEL
+                BikeView.DataContext = editbvm;
+                //SHOW VIEW WINDOW
+                BikeView.Show();
+            }
         }
     }
 }
