@@ -7,7 +7,7 @@ using System.Collections.ObjectModel;
 
 namespace PreagusFietsen.Model
 {
-    class Store {
+    public class Store {
         //PROPERTIES
         public int ID { get; set; }
         public string Address { get; set; }
@@ -19,7 +19,7 @@ namespace PreagusFietsen.Model
 
         public Store() 
         {
-            Bikes = new ObservableCollection<Bike>(); // create new empty list of Students when creating a new Course
+            Bikes = new ObservableCollection<Bike>();
             totalStores++;
             ID = totalStores;
         }

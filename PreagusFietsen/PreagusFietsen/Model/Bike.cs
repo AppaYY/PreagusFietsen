@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PreagusFietsen.Model
 {
-    class Bike { 
+    public class Bike { 
         //PROPERTIES
         public int ID { get; set; }
         public string Type { get; set; }

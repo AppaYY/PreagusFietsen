@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PreagusFietsen.Model
 {
-    class Reservation {
+    public class Reservation {
         //PROPERTIES
         public int ID { get; set; }
         public int CustomerID { get; set; }
@@ -15,5 +15,13 @@ namespace PreagusFietsen.Model
         public DateTime End { get; set; }
         public int PickupStoreID { get; set; }
         public int DropoffStoreID { get; set; }
+
+        private static int totalReservation = 0;
+
+        public Reservation()
+        {
+            totalReservation++;
+            ID = totalReservation;
+        }
     }
 }
