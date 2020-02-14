@@ -36,7 +36,7 @@ namespace PreagusFietsen.ViewModel
             Stores.Add(data);
         }
 
-        public void ChangeName(object a)
+        public void ChangeAddress(object a)
         {
             if (SelectedStore != null)
             {

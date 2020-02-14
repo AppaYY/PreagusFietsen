@@ -13,8 +13,9 @@ namespace PreagusFietsen.ViewModel
         public RelayCommand AddClick { get; set; }
         public BikeEditViewModel(ObservableCollection<Bike> bikes)
         {
-            Bikes = bikes; // set the property Courses (that is bound to the view) to be the collection we get passed from the other View
-            ChangeNameClick = new RelayCommand(ChangeName);
+            // Use the collection Bikes from the other View as a later property for Stores
+            Bikes = bikes; 
+            ChangeNameClick = new RelayCommand(ChangeType);
             DeleteClick = new RelayCommand(DeleteBike);
             AddClick = new RelayCommand(AddBike);
         }
@@ -28,7 +29,7 @@ namespace PreagusFietsen.ViewModel
         public double bikeHourRate { get; set; }
         public int bikeDailyRate { get; set; }
 
-        public void ChangeName(object a)
+        public void ChangeType(object a)
         {
             if (SelectedBike != null)
             {
