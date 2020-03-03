@@ -10,10 +10,9 @@ namespace PreagusFietsen.ViewModel
         public Store SelectedStore { get; set; }
         public RelayCommand DeleteClick { get; set; }
         public RelayCommand AddClick { get; set; }
-        public StoreEditViewModel(ObservableCollection<Store> stores)
+        public StoreEditViewModel()
         {
             // Use the collection Stores from the other View as a later property for Bikes
-            Stores = stores; 
             DeleteClick = new RelayCommand(DeleteStore);
             AddClick = new RelayCommand(AddStore);
         }
