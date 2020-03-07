@@ -26,7 +26,7 @@ namespace PreagusFietsen.ViewModel
         private void OpenEditBikeWin(object o)
         {
             // CREATE NEW BIKE EDIT VIEWMODEL & PASS VIEW WINDOW DATA
-            BikeEditViewModel vm = new BikeEditViewModel { Bikes = Bikes};
+            BikeEditViewModel vm = new BikeEditViewModel { Bikes = SelectedStore.Bikes};
             // MAKE NEW VIEW WINDOW (View -> BikesEdit form)
             BikesEdit BikeView = new BikesEdit();
             // PASS VIEW WINDOW TO VIEWMODEL
